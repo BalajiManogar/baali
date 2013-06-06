@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Font increase multiplier test</title>
+
+    <style type="text/css">
+        .bFontAct {
+            color:red;
+            font-weight:bold;
+            cursor:default;
+        }
+        .bFontActBlue {
+             color:blue;
+             font-weight:bold;
+             cursor:default;
+             padding:2px;
+             margin:2px;
+             width:10px;
+             border: solid 1px #808080;
+        }
+
+        li {
+            display:inline-block;
+            cursor: pointer;
+        }
+
+        p {
+            line-height:167%;
+        }
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="fontIncreaseDecrease.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function ()
+            {
+                $("#bFontIncreaser li").bFontIncrease({ activeCSSClass: "bFontAct", lineHeightPercentage: 1.67, fontIncreaseMultiplier: 4 });
+
+                $("#head li").bFontIncrease({ activeCSSClass: "bFontActBlue", targetElements: "h2", fontIncreaseMultiplier: 4 });
+            }
+        );
+    </script>
+</head>
+<body>
+    <div>
+        This is simple font increase and decrease jquery plugin to increase or decrease the font size when you click the symbol
+        <pre>
+            POSSIBLE VALUES:-
+                activeCSSClass : "bFontActive" // this is the class to create custom class for the active state
+                targetElements: "p" // this property is used to target HTML text element to increase the font size
+                lineHeightPercentage: 1.67 // this property is used to define the line-height in terms of percentage
+                fontIncreaseMultiplier: 2 // this property is the multiplier to increase font-size 
+            -------------------------------------------------------------------------------------------------------------
+
+            DEFAULT VALUES:-
+                targetElements: "body p",
+                fontIncreaseMultiplier: 2,
+                lineHeightPercentage: 1.67,
+                activeCSSClass: "bFontActive"
+
+
+        </pre>
+    </div>
+    <div>
+         <span style="font-weight:bold;font-size:150%;color:red"> paragraph Controls - Click the below A to change paragraph font size.</span>
+        <ul id="bFontIncreaser">
+            <li class="bFontAct">A</li>
+            <li>A</li>
+            <li>A</li>
+        </ul>
+    </div>
+    <div >
+        <span style="font-weight:bold;font-size:150%;color:blue"> h2 Heading Controls - Click the below A to change h2 font size.</span>
+        <ul id="head">
+            <li class="bFontActBlue">A</li>
+            <li>A</li>
+            <li>A</li>
+        </ul>
+        <h2>Heading 1</h2>
+        <h2>Heading 2</h2>
+        <h2>Heading 3</h2>
+    </div>
+  <p> Natoque adipiscing cursus enim cum rhoncus a, in proin a vel arcu sit, ultrices magna ultrices et, cras cras nisi? Nunc in! Cras ut elementum magna eu dolor elit? Pid augue ultrices scelerisque natoque mid, sit lorem mid, ut, lorem. Ridiculus risus! Ridiculus a? Amet nisi eros phasellus, scelerisque quis magna turpis phasellus ut integer? Mid integer et, pid lacus? Turpis magna eu platea sociis parturient, augue? In turpis porttitor? Lacus lundium? Et augue? Purus? Magnis, cras porta pid tortor montes quis mattis duis. Dictumst sociis non facilisis nisi tincidunt, facilisis, montes, cras aliquam, in! Ultrices aliquam lacus! Porta mauris nunc a a habitasse, porta turpis pid mid odio, nec? Odio platea! In ultrices nunc scelerisque. Nisi, integer urna, mus. Sed platea in ac sociis facilisis sed amet mauris placerat ultricies magna ut scelerisque, dapibus integer! Integer ultricies tristique! Turpis odio! Cum sagittis, tincidunt. Et porta arcu eros facilisis lorem, hac risus, amet sed pulvinar nisi, nisi lorem, et eros, mid elementum? Tempor pulvinar aenean. Diam, lectus. Ultricies? A magna parturient placerat dictumst adipiscing nec placerat! Placerat elementum a in. Sagittis a placerat. Ac. Placerat amet in dignissim. Nec proin, sociis et dictumst mattis cum porta pulvinar velit, urna non.</p>
+
+<p>Magna scelerisque etiam, ridiculus ut et auctor! Quis hac aliquet eros nisi sed tristique enim augue ac platea velit, urna! Velit turpis platea! Placerat nunc, cum tortor, mauris risus tincidunt auctor vel rhoncus? Proin lacus adipiscing augue phasellus arcu, elementum enim nisi sit massa montes est, proin rhoncus augue ut enim ultrices? A mid placerat! Hac mauris nec augue! Massa aliquam, et quis eros. Enim magnis in nisi quis. Mattis diam etiam sociis tempor, habitasse nascetur aliquet in habitasse! Cum sit vel amet magnis auctor, integer lorem elementum odio velit proin integer nisi! Lectus porta a integer vel amet in nisi nunc auctor eros, odio eros dignissim auctor eu integer tincidunt, placerat lundium elit, mus a pulvinar rhoncus aenean ridiculus nascetur ac hac! Mus pulvinar sit eros penatibus. Est lundium augue nec vel rhoncus porta! Ut pellentesque porttitor habitasse, cursus non? Pid scelerisque risus, elit, vut urna risus augue, urna nunc, a proin et? Non velit pid integer. Ultrices! Nec urna? Aliquet dictumst, sit et? Augue a diam, dignissim facilisis, est porttitor urna odio cum, magna tempor, tincidunt dis, penatibus mauris lectus hac? Urna amet hac dictumst urna phasellus cras phasellus, dis arcu arcu arcu, facilisis in facilisis pulvinar.</p>
+
+<p>Dictumst, et porta adipiscing dolor scelerisque elementum. Ut placerat auctor ac massa sagittis! Tincidunt? Enim pulvinar, lacus etiam platea porttitor cras pulvinar turpis ac et platea vel! Nisi porttitor, ac arcu, urna urna, odio, duis, vel tempor tincidunt a, ac augue aliquet aenean et sit urna? Et. Enim et? A penatibus etiam habitasse purus ridiculus! Vut lundium turpis est sociis rhoncus! Auctor ac a? Dictumst lacus non ac elit egestas? Ut? Nunc enim! Mauris cras, nisi ac magnis quis, etiam tincidunt! Phasellus natoque ac, in, magnis etiam odio integer? Phasellus augue, nec nisi. Dis eros! Velit auctor! Mid urna. Egestas, risus, sit auctor, ultrices magnis dis vel porta placerat. Penatibus ut placerat mid, etiam hac eu ridiculus! Elementum elementum dignissim placerat tincidunt proin, dictumst enim massa odio, pulvinar sed, sed ridiculus? Sit non sagittis eros scelerisque montes ultricies amet. Cursus placerat tincidunt ultrices? Phasellus, vel? Habitasse nec ac. Cras nec, non? Non, augue sit risus tortor sit, eu lectus. Etiam dis nunc aliquam lorem penatibus penatibus, elit ut phasellus montes rhoncus dis tortor, sit tempor? Tristique platea quis mid velit sit elit ac turpis! Diam! Turpis nunc? Eu? Elementum? Pulvinar aliquet eros, dictumst, rhoncus mattis auctor natoque, porta hac.</p>
+
+
+</body>
+</html>
